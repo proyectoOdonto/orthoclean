@@ -7,21 +7,61 @@
 </ion-header>
 
 <ion-content>
+  <div class="content-page">
 
-    <div class="navbar">
-      <ul class="menu">
-        <li>
-          <a href="" class="fa fa-facebook">
-            
-          </a>
-        </li>
-      </ul>
+
+    <input id="check" type="checkbox">
+
+    <label class="main" for="check">
+
+      <div class="title">
+
+        <i class="fa fa-bars"></i>
+
+      </div>
+
+    </label>
+
+
+    <div class="container">
+      <a class="plate">
+        <div fill="clear" (click)="goBrushInfoPage()">
+          <i class="fa fa-paint-brush"></i>
+        </div>
+
+      </a>
+      <a class="plate">
+        <div fill="clear" (click)="goInstrumentsInfoPage()">
+          <i class="fa fa-briefcase"></i>
+        </div>
+
+      </a>
+      <a class="plate">
+        <div (click)="goChronometersPage()" fill="clear">
+          <i class="fa fa-clock-o"></i>
+        </div>
+      </a>
+      <a class="plate">
+        <div (click)="goExamPage()" fill="clear"><i class="fa fa-tasks"></i></div>
+
+      </a>
+      <a class="plate">
+        <div (click)="goContactUsPage()" fill="clear"><i class="fa fa-whatsapp"></i></div>
+
+      </a>
     </div>
 
-  <ion-button (click)="goChronometersPage()" >Cronómetros</ion-button>
-  <ion-button (click)="goBrushInfoPage()" >Cepillado</ion-button>
-  <ion-button (click)="goInstrumentsInfoPage()" >Instrumentos</ion-button>
-  <ion-button (click)="goExamPage()" >Quiz</ion-button>
-  <ion-button (click)="goContactUsPage()" >Contactanos</ion-button>
 
+
+    <!--     <div class="navbar">MENU
+      <ul class="menu">
+        <li><a href="" class="fa fa-facebook"></a></li>
+        <li><a href="" class="fa fa-twitter"></a></li>
+        <li><a href="" class="fa fa-github"></a></li>
+        <li><a href="" class="fa fa-whatsapp"></a></li>
+        <li><a href="" class="fa fa-google-plus"></a></li>
+      </ul>
+    </div> -->
+
+  </div>
 </ion-content>
