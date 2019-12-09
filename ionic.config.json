@@ -1,5 +1,7 @@
 {
   "name": "orthoclean",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
