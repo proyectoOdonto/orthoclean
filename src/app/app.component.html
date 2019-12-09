@@ -1,3 +1,23 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-menu contentId="contentMenu" side="start">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Menú</ion-title>
+
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list *ngFor="let page of pages">
+                <ion-menu-toggle outo-hide="true">
+                    <ion-item [routerLink]="page.url" routerDirection="root"
+                        [class.active-item]="selectedPath === page.url">
+                        <ion-icon [name]="page.icon" slot="start">
+                        </ion-icon>
+                        {{page.pagename}}
+                    </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="contentMenu" main></ion-router-outlet>
 </ion-app>
