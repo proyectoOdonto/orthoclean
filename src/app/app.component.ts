@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Router } from '@angular/router';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   pages: any[] = [];
-
+  selectedPath='';
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -21,6 +21,7 @@ export class AppComponent {
     private router:Router
   ) {
     this.initializeApp();
+   
   }
 
   initializeApp() {
@@ -45,7 +46,7 @@ export class AppComponent {
         },
         {
           pagename: "Instrumentos",
-          icon: "exam",
+          icon: "home",
           url:"/instruments-info"
         },
         {
@@ -58,11 +59,14 @@ export class AppComponent {
           icon: "home",
           url:"/contact-us"
         }
-      ]
+      ];
+
+      this.router.events.subscribe((event:RouterEvent)=>{
+        this.selectedPath = event.url;
+      });
+
     });
   }
 
-  goToPage(page){
-    this.router.navigate([page.url]);
-  }
+
 }

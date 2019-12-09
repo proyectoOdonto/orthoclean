@@ -3,17 +3,17 @@
         <ion-header>
             <ion-toolbar>
                 <ion-title>Menú</ion-title>
+
             </ion-toolbar>
         </ion-header>
         <ion-content>
             <ion-list *ngFor="let page of pages">
                 <ion-menu-toggle outo-hide="true">
-                    <ion-item (click)=goToPage(page)>
+                    <ion-item [routerLink]="page.url" routerDirection="root"
+                        [class.active-item]="selectedPath === page.url">
                         <ion-icon [name]="page.icon" slot="start">
                         </ion-icon>
-                        <ion-label>
-                            {{page.pagename}}
-                        </ion-label>
+                        {{page.pagename}}
                     </ion-item>
                 </ion-menu-toggle>
             </ion-list>
