@@ -13,15 +13,15 @@ import { Router, RouterEvent } from '@angular/router';
 export class AppComponent {
 
   pages: any[] = [];
-  selectedPath='';
+  selectedPath = '/home';
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private router:Router
+    private router: Router
   ) {
     this.initializeApp();
-   
+
   }
 
   initializeApp() {
@@ -32,36 +32,36 @@ export class AppComponent {
         {
           pagename: "Inicio",
           icon: "home",
-          url:"/home"
+          url: "/home"
         },
         {
           pagename: "Cronometro",
           icon: "home",
-          url:"/chronometers"
+          url: "/chronometers"
         },
         {
           pagename: "Cepillado",
           icon: "home",
-          url:"/brush-info"
+          url: "/brush-info"
         },
         {
           pagename: "Instrumentos",
           icon: "home",
-          url:"/instruments-info"
+          url: "/instruments-info"
         },
         {
           pagename: "Examen",
           icon: "home",
-          url:"/exam"
+          url: "/exam"
         },
         {
           pagename: "Contactanos",
           icon: "home",
-          url:"/contact-us"
+          url: "/contact-us"
         }
       ];
 
-      this.router.events.subscribe((event:RouterEvent)=>{
+      this.router.events.subscribe((event: RouterEvent) => {
         this.selectedPath = event.url;
       });
 
