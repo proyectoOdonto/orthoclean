@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { interval } from 'rxjs';
 import { IonSlides } from '@ionic/angular';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+
 
 @Component({
   selector: 'app-chronometers',
@@ -42,11 +44,23 @@ export class ChronometersPage implements OnInit, OnDestroy {
   observable;
   suscription;
 
-  constructor() {
+  constructor(private nativeAudio: NativeAudio) {
 
   }
 
   ngOnInit() {
+
+
+    this.nativeAudio.preloadSimple('audioClock', './assets/audios/ticTac.mp3').then(
+      ()=>{
+        console.log("Audio subido con éxito");
+      }, (value)=>{
+        console.log("error: "+value);
+      }
+      );
+
+      this.nativeAudio.play('audioClock').then(()=>{}, ()=>{});
+
 
     this.currentIndex = 0;
     this.reStartTimer(true);
@@ -68,6 +82,7 @@ export class ChronometersPage implements OnInit, OnDestroy {
       //Detiene el cronometro actual
       this.suscription.unsubscribe();
     }
+    
 
     //Asigna el tiempo del nuevo cronometro
     this.count = this.steps[this.currentIndex]['time'];
@@ -77,6 +92,7 @@ export class ChronometersPage implements OnInit, OnDestroy {
     this.observable = interval(1000);
     //Este metodo es llamado cada segundo
     this.suscription = this.observable.subscribe((val) => {
+      this.nativeAudio.play('audioClock').then(()=>{}, ()=>{});
 
       //Si llega al segundo 0 cambia al siguiente slide
       if (this.count == 0) {
