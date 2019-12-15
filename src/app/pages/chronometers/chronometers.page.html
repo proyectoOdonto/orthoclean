@@ -1,12 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>chronometers</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
+    <ion-title>chronometers</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+
+  <ion-slides #mySlider pager="true" scrollbar="true" (ionSlideDidChange)=onSlideChanged()>
+    <ion-slide *ngFor="let item of steps">
+      <ion-card >
+        <ion-progress-bar [value]='porcentage'></ion-progress-bar>
+        <img [src]='item.src' />
+        <ion-card-header>
+          <ion-card-subtitle>Destination</ion-card-subtitle>
+          <ion-card-title>Madison, WI</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{count}}
+          {{porcentage}}
+          <ion-progress-bar [value]='porcentage'></ion-progress-bar>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>    
+  </ion-slides>
 
 </ion-content>

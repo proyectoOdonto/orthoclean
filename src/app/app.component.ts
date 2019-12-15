@@ -69,4 +69,27 @@ export class AppComponent {
   }
 
 
+  goToPage(url){
+    this.router.navigate([url]);
+  }
+
+  goChronometersPage() {
+    this.router.navigate(['/chronometers']);
+  }
+
+  goBrushInfoPage() {
+    this.router.navigate(['/brush-info']);
+  }
+
+  goInstrumentsInfoPage() {
+    this.router.navigate(['/instruments-info']);
+  }
+
+  goExamPage() {
+    this.router.navigate(['/exam']);
+  }
+
+  goContactUsPage() {
+    this.router.navigate(['/contact-us']);
+  }
 }
