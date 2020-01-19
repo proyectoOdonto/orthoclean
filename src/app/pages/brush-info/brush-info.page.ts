@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 @Component({
   selector: 'app-brush-info',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrushInfoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private youtube: YoutubeVideoPlayer
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  openMyVideo(id) {
+    this.youtube.openVideo(id);
   }
 
 }

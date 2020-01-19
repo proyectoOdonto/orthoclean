@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
+//import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,8 +20,9 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
     StatusBar,
     SplashScreen,
     NativeAudio,
+    //YoutubeVideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
