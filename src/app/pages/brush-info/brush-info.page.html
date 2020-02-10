@@ -8,10 +8,83 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <p>Oprima el botón para ver video de cepillarse con brackets<br>
+  <div>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title>
+          Cepillarse con brackets
+        </ion-card-title>
+        <ion-card-subtitle>
+          Correcto de cepillado (youtube botón)
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button (click)="openMyVideo('i6yGKcXy0QQ')">Reproducir el Video</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title>
+          Caries
+        </ion-card-title>
+        <ion-card-subtitle>
+          Este video muestra el proceso correcto de cepillado (youtube)
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="iframe-container">
+          <iframe [src]="sanitize(vid)" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title>
+          Ortodoncia
+        </ion-card-title>
+        <ion-card-subtitle>
+          Este video muestra el proceso correcto de cepillado con brackets (drive)
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="iframe-container">
+          <iframe [src]="sanitize(vid2)" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+
+  <!-- <p>Oprima el botón para ver video de cepillarse con brackets<br>
     <ion-button (click)="openMyVideo('i6yGKcXy0QQ')">Reproducir el Video</ion-button>
-  </p>
-  <p>Oprima el botón 2<br>
+  </p> -->
+  <!--      <p>Oprima el botón 2<br>
     <ion-button (click)="playVideo()" expand="full" color="dark">Reproducir el Video</ion-button>
-  </p>
+  </p>  -->
+
+  <!-- <div class="iframe-container">
+    <iframe [src]="sanitize(vid)" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="iframe-container">
+    <iframe [src]="sanitize(vid2)" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/i8k_bDpeR7Y" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="iframe-container">
+
+    <iframe src="https://drive.google.com/file/d/1KrCc6scGoF6SQn4EQPGwK7DDXCOwJahs/preview" allowfullscreen></iframe>
+  </div> -->
+  <!--
+  <iframe width="757" height="409" src="https://www.youtube.com/embed/i8k_bDpeR7Y" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe src="https://drive.google.com/file/d/1KrCc6scGoF6SQn4EQPGwK7DDXCOwJahs/preview" width="640" height="480"></iframe>
+
+    <iframe width="500" height="320" [src]="sanitize(vid2)" frameborder="0" allowfullscreen></iframe>
+ -->
+
 </ion-content>

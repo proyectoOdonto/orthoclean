@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
-import { StreamingMedia } from '@ionic-native/streaming-media/ngx'; 
+//import { StreamingMedia } from '@ionic-native/streaming-media/ngx'; 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +23,7 @@ import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
     NativeAudio,
     YoutubeVideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    StreamingMedia
+    //StreamingMedia
   ],
   bootstrap: [AppComponent]
 })

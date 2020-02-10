@@ -31,6 +31,7 @@
     "cordova-plugin-streaming-media": "^2.2.0",
     "cordova-plugin-youtube-video-player": "^2.4.0",
     "core-js": "^2.5.4",
+    "domsanitizer": "^0.2.2",
     "font-awesome": "^4.7.0",
     "jquery": "^1.11.1",
     "rxjs": "~6.5.1",
