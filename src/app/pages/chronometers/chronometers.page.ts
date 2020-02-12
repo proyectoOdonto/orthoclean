@@ -51,7 +51,8 @@ export class ChronometersPage implements OnInit, OnDestroy {
   ngOnInit() {
 
 
-    this.nativeAudio.preloadSimple('audioClock', './assets/audios/ticTac.mp3').then(
+    this.nativeAudio.preloadSimple('audioClock', '.ticTac.mp3').then(
+      ///./assets/audios/ticTac.mp3
       ()=>{
         console.log("Audio subido con éxito");
       }, (value)=>{
@@ -92,7 +93,7 @@ export class ChronometersPage implements OnInit, OnDestroy {
     this.observable = interval(1000);
     //Este metodo es llamado cada segundo
     this.suscription = this.observable.subscribe((val) => {
-      this.nativeAudio.play('audioClock').then(()=>{}, ()=>{});
+      //this.nativeAudio.play('audioClock').then(()=>{}, ()=>{});
 
       //Si llega al segundo 0 cambia al siguiente slide
       if (this.count == 0) {
