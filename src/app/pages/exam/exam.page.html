@@ -9,4 +9,47 @@
 
 <ion-content>
 
+
+
+  <ion-grid>
+    <ion-row>
+
+
+    <ion-col>
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of arrLives">
+        <div *ngIf="item">
+          <ion-icon name="heart"></ion-icon>
+        </div>
+        <div *ngIf="!item">
+
+          <ion-icon name="close"></ion-icon>
+
+        </div>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              {{currentQuestion.title}}
+            </ion-label>
+          </ion-list-header>
+
+          <ion-item *ngFor="let item of currentQuestion.options; let i = index">
+            <ion-label>{{item.option}}</ion-label>
+            <ion-radio slot="start" value="{{i}}" (ionFocus)=saveAnswer(i)></ion-radio>
+          </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+
+
 </ion-content>
