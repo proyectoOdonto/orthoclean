@@ -12,23 +12,41 @@ export class ExamPage implements OnInit {
   time = 5;
   currentQuestion = null;
   currentIndex = 0;
-  indexSelected=null;
+  indexSelected = null;
   initialLives = 4;
   lives = 0;
   arrLives = [];
   questions = [];
-  progress= 0.0;
-  totalQuestions=0;
-
+  progress = 0.0;
+  totalQuestions = 0;
 
   constructor(private router: Router, public toastController: ToastController) { }
 
   ngOnInit() {
-    this.lives =  this.initialLives;
-    for(let i = 0; i < this.initialLives; i++){
+    this.initialize();
+  }
+
+  ionViewWillEnter() {
+    this.initialize();
+  }
+
+  initialize() {
+    this.time = 5;
+    this.currentQuestion = null;
+    this.currentIndex = 0;
+    this.indexSelected = null;
+    this.initialLives = 4;
+    this.lives = 0;
+    this.arrLives = [];
+    this.questions = [];
+    this.progress = 0.0;
+    this.totalQuestions = 0;
+
+    this.lives = this.initialLives;
+    for (let i = 0; i < this.initialLives; i++) {
       this.arrLives.push(true);
     }
-    
+
     this.questions = [
       {
         title: "¿Pregunta 1?",
@@ -136,27 +154,24 @@ export class ExamPage implements OnInit {
 
     this.currentQuestion = this.questions[0];
     this.totalQuestions = this.questions.length;
-
   }
 
-
-  saveAnswer(index){
+  saveAnswer(index) {
 
     this.indexSelected = index;
 
     var currentOptions = this.currentQuestion['options'];
-    if(currentOptions[index]['state'] != true){ //Si la respuesta es incorrecta
+    if (currentOptions[index]['state'] != true) { //Si la respuesta es incorrecta
       //disminuye una vida
-      this.arrLives[this.lives-1]=false;
+      this.arrLives[this.lives - 1] = false;
       this.lives--
 
-
-      if(this.lives == 0){
+      if (this.lives == 0) {
         //Perdiste
         this.router.navigateByUrl('/wrong');
-   
-      }else{
-        
+
+      } else {
+
         //Pasa a la siguiente pregunta
         var temp = this.questions.shift();
         this.questions.push(temp);
@@ -164,17 +179,17 @@ export class ExamPage implements OnInit {
         this.wrongToast();
       }
 
-    }else{ //Si la respuesta es correcta
+    } else { //Si la respuesta es correcta
       this.questions.shift();
-      if(this.questions.length > 0){
+      if (this.questions.length > 0) {
         //pasa a la siguiente pregunta      
         this.currentQuestion = this.questions[0];
         this.correctToast();
-        this.updateBar(this.totalQuestions-(this.questions.length));
-      }else{
+        this.updateBar(this.totalQuestions - (this.questions.length));
+      } else {
         //Ganaste
         this.router.navigateByUrl('/correct');
-        
+
       }
     }
   }
@@ -183,7 +198,7 @@ export class ExamPage implements OnInit {
     const toast = await this.toastController.create({
       message: '¡Muy bien!. Respuesta correcta',
       duration: 2000,
-      color:"success"
+      color: "success"
     });
     toast.present();
   }
@@ -192,16 +207,12 @@ export class ExamPage implements OnInit {
     const toast = await this.toastController.create({
       message: 'Respuesta Incorrecta',
       duration: 2000,
-      color:"danger"
+      color: "danger"
     });
     toast.present();
   }
 
-  updateBar(count){
-    console.log(count);
-    
+  updateBar(count) {
     this.progress = count / this.totalQuestions;
   }
-  
-
 }

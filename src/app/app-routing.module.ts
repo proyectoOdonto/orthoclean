@@ -24,6 +24,14 @@ const routes: Routes = [
     path: 'contact-us',
     loadChildren: () => import('./pages/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
+  {
+    path: 'correct',
+    loadChildren: () => import('./pages/exam/correct/correct.module').then( m => m.CorrectPageModule)
+  },
+  {
+    path: 'wrong',
+    loadChildren: () => import('./pages/exam/wrong/wrong.module').then( m => m.WrongPageModule)
+  }
 
 ];
 
