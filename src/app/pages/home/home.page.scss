@@ -263,3 +263,11 @@
 #check:checked ~ .main + .container .plate:nth-of-type(5) {
   bottom: -180%;
 }
+
+ion-content{
+  --ion-background-color:#AFDBE5;
+}
+
+ion-toolbar{
+  --ion-background-color:#62D0B5;
+}

@@ -11,7 +11,11 @@ import { DomSanitizer } from '@angular/platform-browser'
 })
 export class BrushInfoPage implements OnInit {
   vid = "https://www.youtube.com/embed/J407UFrSy7E";
-  vid2 = "https://drive.google.com/file/d/1KrCc6scGoF6SQn4EQPGwK7DDXCOwJahs/preview";
+  vid1 = "https://drive.google.com/file/d/1RhKGG0lrgjZpD_wZQ4rwXUjt8P079UE3/preview";
+  vid2 = "https://drive.google.com/file/d/1ySj_UKJxZSGiOSm6S-8I0qloXZEnXbmq/preview";
+  vid3 = "https://drive.google.com/file/d/1lMaQjvL_v9AZ8BNBIJghf-a_MGOOJtVo/preview";
+  vid4 = "https://drive.google.com/file/d/1lFL8e2FoUUtgCrvDGs_1wwdMLDEFvCWY/preview";
+
 
   constructor(/* private streamingMedia: StreamingMedia, */
     private youtube: YoutubeVideoPlayer, private domSanitizer: DomSanitizer
