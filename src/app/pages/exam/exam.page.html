@@ -10,15 +10,15 @@
 <ion-content>
 
 
-
   <ion-grid>
+
+  
     <ion-row>
-
-
     <ion-col>
       <ion-progress-bar [value]="progress"></ion-progress-bar>
     </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col *ngFor="let item of arrLives">
         <div *ngIf="item">
@@ -29,27 +29,36 @@
           <ion-icon name="close"></ion-icon>
 
         </div>
-      </ion-col>
-      
+      </ion-col>  
     </ion-row>
+
     <ion-row>
-      <ion-list>
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>
-              {{currentQuestion.title}}
-            </ion-label>
-          </ion-list-header>
+      <ion-col>
+      <ion-card>
+        <ion-card-header>        
+          <ion-card-title>{{currentQuestion.title}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-list>
+          
+            <ion-item *ngFor="let item of currentQuestion.options; let i = index">
+              <ion-row>
+                <ion-col>
+                <ion-chip color="tertiary">
+                  <ion-label (click)=saveAnswer(i)>{{item.option}}</ion-label>
+                </ion-chip>
+              </ion-col>
+              </ion-row>
 
-          <ion-item *ngFor="let item of currentQuestion.options; let i = index">
-            <ion-label>{{item.option}}</ion-label>
-            <ion-radio slot="start" value="{{i}}" (ionFocus)=saveAnswer(i)></ion-radio>
-          </ion-item>
-
-        </ion-radio-group>
-      </ion-list>
+            </ion-item>
+  
+        </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    
     </ion-row>
   </ion-grid>
-
 
 </ion-content>

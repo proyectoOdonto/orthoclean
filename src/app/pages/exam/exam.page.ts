@@ -197,7 +197,7 @@ export class ExamPage implements OnInit {
   async correctToast() {
     const toast = await this.toastController.create({
       message: '¡Muy bien!. Respuesta correcta',
-      duration: 2000,
+      duration: 1000,
       color: "success"
     });
     toast.present();
@@ -206,7 +206,7 @@ export class ExamPage implements OnInit {
   async wrongToast() {
     const toast = await this.toastController.create({
       message: 'Respuesta Incorrecta',
-      duration: 2000,
+      duration: 1000,
       color: "danger"
     });
     toast.present();
