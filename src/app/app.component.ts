@@ -31,32 +31,32 @@ export class AppComponent {
       this.pages = [
         {
           pagename: "Inicio",
-          icon: "home",
+          icon: "home-orthoclean",
           url: "/home"
         },
         {
           pagename: "Cronometro",
-          icon: "home",
+          icon: "chronometers-orthoclean",
           url: "/chronometers"
         },
         {
           pagename: "Cepillado",
-          icon: "home",
+          icon: "brush-orthoclean",
           url: "/brush-info"
         },
         {
           pagename: "Instrumentos",
-          icon: "home",
+          icon: "instruments-orthoclean",
           url: "/instruments-info"
         },
         {
           pagename: "Examen",
-          icon: "home",
+          icon: "exam-orthoclean",
           url: "/exam"
         },
         {
           pagename: "Contactanos",
-          icon: "home",
+          icon: "contact-orthoclean",
           url: "/contact-us"
         }
       ];
