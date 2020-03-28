@@ -1,11 +1,19 @@
-.active-item{
-    border-left: 8px solid var(--ion-color-primary)
+.active-item {
+  border-left: 8px solid var(--ion-color-primary);
 }
 
-ion-content{
-    --ion-background-color:#AFDBE5;
-  }
+ion-content {
+  --ion-background-color: #917cf8;
+  color: white;
+}
 
-  ion-toolbar{
-    --ion-background-color:#62D0B5;
-  }
+ion-toolbar {
+  --ion-background-color: #23c2f2;
+}
+
+.imageSize{
+/*   height: 1500%;
+  width: 1500%; */
+  font-size: 300%;
+}
+

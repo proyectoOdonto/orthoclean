@@ -31,30 +31,44 @@
     <div class="container">
       <a class="plate">
         <div fill="clear" (click)="goBrushInfoPage()">
-          <i class="fa fa-paint-brush"></i>
+          <!--           <i class="fa fa-paint-brush"></i>
+ --> <i class="iconResource" slot="start">
+          </i>
         </div>
 
       </a>
       <a class="plate">
         <div fill="clear" (click)="goInstrumentsInfoPage()">
-          <i class="fa fa-briefcase"></i>
+          <!--  <i class="fa fa-briefcase"></i> -->
+          <i class="iconResource2" slot="start">
+          </i>
         </div>
 
       </a>
       <a class="plate">
         <div (click)="goChronometersPage()" fill="clear">
-          <i class="fa fa-clock-o"></i>
+          <!-- <i class="fa fa-clock-o"></i> -->
+          <i class="iconResource3" slot="start">
+          </i>
         </div>
       </a>
       <a class="plate">
-        <div (click)="goExamPage()" fill="clear"><i class="fa fa-tasks"></i></div>
+        <div (click)="goExamPage()" fill="clear">
+          <!--           <i class="fa fa-tasks"></i>
+ --> <i class="iconResource4" slot="start"></i>
+
+        </div>
 
       </a>
-<!--       <a href="https://wa.me/573105873574?text=Doc. Escribo desde la app orthoclean" class="plate">
+      <!--       <a href="https://wa.me/573105873574?text=Doc. Escribo desde la app orthoclean" class="plate">
         <div fill="clear"><i class="fa fa-whatsapp"></i></div>
       </a> -->
-       <a class="plate">
-        <div (click)="goContactUsPage()" fill="clear"><i class="fa fa-whatsapp"></i></div>
+      <a class="plate">
+        <div (click)="goContactUsPage()" fill="clear">
+          <!--           <i class="fa fa-whatsapp"></i>
+ --> <i class="iconResource5" slot="start"></i>
+
+        </div>
       </a>
     </div>
 
