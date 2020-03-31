@@ -1,118 +1,3 @@
-/* .content-page {
-  background-color: #f273ba;
-  font-family: tahoma;
-  overflow: hidden;
-}
-
-.navbar {
-  width: 38.5%;
-  height: 30.7%;
-  line-height: 320%;
-  border-radius: 50%;
-  background: white;
-  margin: 30% auto;
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  font-size: 2.75em;
-  font-weight: bold;
-  color: #f273ba;
-  transition: 0.24s 0.2s;
-}
-
-.navbar .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: -75px;
-  left: -75px;
-  border: 150px solid transparent;
-  cursor: default;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: transform 1.4s 0.07s;
-  z-index: -1;
-}
-
-.navbar:hover .menu {
-  transition: transform 0.4s 0.08s, z-index 0s 0.5s;
-  transform: scale(1);
-  z-index: 1;
-}
-
-.navbar .menu li {
-  position: absolute;
-  top: -100px;
-  left: -100px;
-  transform-origin: 100px 100px;
-  transition: all 0.5s 0.1s;
-}
-
-.navbar:hover .menu li {
-  transition: all 0.7s;
-}
-
-.navbar .menu li a {
-  width: 11%;
-  height: 9.2%;
-  line-height: 75.7%;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  font-size: 59%;
-  color: #f273ba;
-  transition: 0.7s;
-}
-
-.navbar:hover .menu li:nth-child(1) {
-  transition-delay: 0.07s;
-  transform: rotate(85deg);
-}
-
-.navbar:hover .menu li:nth-child(1) a {
-  transition-delay: 0.04s;
-  transform: rotate(635deg);
-}
-
-.navbar:hover .menu li:nth-child(2) {
-  transition-delay: 0.07s;
-  transform: rotate(125deg);
-}
-
-.navbar:hover .menu li:nth-child(2) a {
-  transition-delay: 0.08s;
-  transform: rotate(595deg);
-}
-
-.navbar:hover .menu li:nth-child(3) {
-  transition-delay: 0.06s;
-  transform: rotate(165deg);
-}
-
-.navbar:hover .menu li:nth-child(3) a {
-  transition-delay: 0.12s;
-  transform: rotate(555deg);
-}
-
-.navbar:hover .menu li:nth-child(4) {
-  transition-delay: 0.08s;
-  transform: rotate(205deg);
-}
-.navbar:hover .menu li:nth-child(4)a {
-  transition-delay: 0.16s;
-  transform: rotate(515deg);
-}
-
-.navbar:hover .menu li:nth-child(5) {
-  transition-delay: 0.12s;
-  transform: rotate(250deg);
-}
-
-.navbar:hover .menu li:nth-child(5) a {
-  transition-delay: 0.24s;
-  transform: rotate(475deg);
-} */
 
 .icon {
   content: url("../../../assets/custom-ion-icons/md-logo-orthoclean.svg");
@@ -132,23 +17,84 @@
 
 .iconResource {
   content: url("../../../assets/custom-ion-icons/md-brush-orthoclean.svg");
-  top: -180%;
+
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 10;
+  left: 10;
+  border-radius: 90%;
+
+  cursor: pointer;
+
+  //top: -180%; 
+  z-index: 10;
+
 }
 
 .iconResource2 {
   content: url("../../../assets/custom-ion-icons/md-instruments-orthoclean.svg");
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 10;
+  border-radius: 90%;
+
+  cursor: pointer;
+
+  //top: -180%; 
+  z-index: 10;
 }
 
 .iconResource3 {
   content: url("../../../assets/custom-ion-icons/md-chronometers-orthoclean.svg");
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 10;
+  border-radius: 90%;
+
+  cursor: pointer;
+
+  //top: -180%; 
+  z-index: 10;
 }
 
 .iconResource4 {
   content: url("../../../assets/custom-ion-icons/md-exam-orthoclean.svg");
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 10;
+  border-radius: 90%;
+
+  cursor: pointer;
+
+  //top: -180%; 
+  z-index: 10;
 }
 
 .iconResource5 {
   content: url("../../../assets/custom-ion-icons/md-contact-orthoclean.svg");
+  margin: auto;
+  position: absolute;
+  top: 10;
+  right: 0;
+  bottom: 0;
+  left: 10;
+  border-radius: 90%;
+
+  cursor: pointer;
+
+  //top: -180%; 
+  z-index: 10;
 }
 
 #check {
@@ -166,22 +112,23 @@
   width: 165px;
   height: 165px;
   border-radius: 90%;
+  
 }
 
 .main {
-  background-color: greenyellow;
+  background-color: #917cf8;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   z-index: 50;
 }
 
 .main:hover {
-  background-color: greenyellow;
+  background-color: #917cf8;
 }
 
 .main:active {
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35), inset 1px 2px 2px rgba(0, 0, 0, 0.35);
-  background-color: greenyellow;
+  background-color: #917cf8;
 }
 
 .main .title {
@@ -233,35 +180,35 @@
 }
 
 .plate:nth-of-type(1) {
-  background-color: rgba(109, 231, 200, 0.3);
+  //background-color: rgba(109, 231, 200, 0.3);
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .plate:nth-of-type(2) {
-  background-color: rgba(243, 156, 80, 0.1);
+  //background-color: rgba(243, 156, 80, 0.1);
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
 .plate:nth-of-type(3) {
-  background-color: rgba(247, 80, 173, 0.1);
+  //background-color: rgba(247, 80, 173, 0.1);
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
 .plate:nth-of-type(4) {
-  background-color: rgba(80, 128, 136, 0.5);
+  //background-color: rgba(80, 128, 136, 0.5);
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
 .plate:nth-of-type(5) {
-  background-color: limegreen;
+  //background-color: limegreen;
   -webkit-transition-delay: 0.4s;
   -moz-transition-delay: 0.4s;
   transition-delay: 0.4s;
