@@ -2,17 +2,23 @@
     <ion-menu contentId="contentMenu" side="start">
         <ion-header>
             <ion-toolbar>
-                <ion-title>Menú</ion-title>
+                <ion-title>
+                    <ion-text color="light">
+                        Menú
+                    </ion-text>
+                </ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content>
             <ion-list *ngFor="let page of pages">
                 <ion-menu-toggle outo-hide="true">
-                    <ion-item [routerLink]="page.url" routerDirection="root"
-                        (cliak)="goToPage(page.url)">
-                        <ion-icon [name]="page.icon" slot="start">
+                    <ion-item [routerLink]="page.url" routerDirection="root" (click)="goToPage(page.url)">
+                        <ion-icon [name]="page.icon" class="imageSize" slot="start">
                         </ion-icon>
-                        {{page.pagename}}
+                        <ion-text color="light">
+                            {{page.pagename}}
+
+                        </ion-text>
                     </ion-item>
                 </ion-menu-toggle>
             </ion-list>
