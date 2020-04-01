@@ -12,7 +12,7 @@
 
   <ion-slides #mySlider pager="true" scrollbar="true" (ionSlideDidChange)=onSlideChanged()>
     <ion-slide *ngFor="let item of steps">
-      <ion-card >
+      <ion-card class="card">
         <ion-progress-bar [value]='porcentage'></ion-progress-bar>
         <img [src]='item.src' />
         <ion-card-header>

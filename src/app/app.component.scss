@@ -17,3 +17,11 @@ ion-toolbar {
   font-size: 300%;
 }
 
+ion-menu {
+  --ion-background-color: var(--ion-color-primary);
+}
+
+ion-menu-button.md.button.ion-activatable.ion-focusable.hydrated {
+  color: white;
+}
+

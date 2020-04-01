@@ -9,7 +9,6 @@
 
 <ion-content>
 
-
   <ion-grid>
 
   
@@ -22,7 +21,7 @@
     <ion-row>
       <ion-col *ngFor="let item of arrLives">
         <div *ngIf="item">
-          <ion-icon name="heart"></ion-icon>
+          <ion-icon name="heart" color="danger"></ion-icon>
         </div>
         <div *ngIf="!item">
 
@@ -34,9 +33,11 @@
 
     <ion-row>
       <ion-col>
-      <ion-card>
-        <ion-card-header>        
-          <ion-card-title>{{currentQuestion.title}}</ion-card-title>
+      <ion-card class="card">
+        <ion-card-header>
+          
+            <ion-card-title color="light">{{currentQuestion.title}}</ion-card-title>
+          
         </ion-card-header>
       
         <ion-card-content>
@@ -46,7 +47,7 @@
               <ion-row>
                 <ion-col>
                 <ion-chip color="tertiary">
-                  <ion-label (click)=saveAnswer(i)>{{item.option}}</ion-label>
+                    <ion-label (click)=saveAnswer(i)>{{item.option}}</ion-label>
                 </ion-chip>
               </ion-col>
               </ion-row>

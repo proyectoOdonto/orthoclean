@@ -17,4 +17,6 @@ import { InstrumentsInfoPage } from './instruments-info.page';
   ],
   declarations: [InstrumentsInfoPage]
 })
-export class InstrumentsInfoPageModule {}
+export class InstrumentsInfoPageModule {
+
+}
