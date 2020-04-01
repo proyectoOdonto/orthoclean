@@ -1,6 +1,6 @@
 <ion-app>
-    <ion-menu contentId="contentMenu" side="start">
-        <ion-header>
+    <ion-menu contentId="contentMenu" side="start" >
+        <ion-header color="danger">
             <ion-toolbar >
                 <ion-title>
                     <ion-text color="light">
@@ -12,12 +12,11 @@
         <ion-content>
             <ion-list *ngFor="let page of pages">
                 <ion-menu-toggle outo-hide="true">
-                    <ion-item [routerLink]="page.url" routerDirection="root" (click)="goToPage(page.url)">
+                    <ion-item [routerLink]="page.url" routerDirection="root" (click)="goToPage(page.url)" >
                         <ion-icon [name]="page.icon" class="imageSize" slot="start">
                         </ion-icon>
                         <ion-text color="light">
                             {{page.pagename}}
-
                         </ion-text>
                     </ion-item>
                 </ion-menu-toggle>
