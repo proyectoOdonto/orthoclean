@@ -18,24 +18,92 @@ export class ChronometersPage implements OnInit, OnDestroy {
   steps = [
     {
       id: 0,
-      time: 10,
-      src: "../../../assets/images/img1.jpg"
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (1).jpg"
     },
     {
       id: 1,
-      time: 20,
-      src: "../../../assets/images/img1.jpg"
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (2).jpg"
     },
     {
       id: 2,
-      time: 30,
-      src: "../../../assets/images/img1.jpg"
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (3).jpg"
     },
     {
-      id: 2,
-      time: 0,
-      src: "../../../assets/images/img1.jpg"
+      id: 3,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (4).jpg"
+
     },
+    {
+      id: 4,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (5).jpg"
+
+    },
+    {
+      id: 5,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (6).jpg"
+
+    },
+    {
+      id: 6,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (7).jpg"
+
+    },
+    {
+      id: 7,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (8).jpg"
+
+    },
+    {
+      id: 8,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (9).jpg"
+
+    },
+    {
+      id: 9,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (10).jpg"
+
+    },
+    {
+      id: 10,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (11).jpg"
+
+    },
+    {
+      id: 11,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (12).jpg"
+
+    },
+    {
+      id: 12,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (13).jpg"
+
+    },
+    {
+      id: 13,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (14).jpg"
+
+    },
+    {
+      id: 14,
+      time: 2,
+      src: "../../../assets/images/chronometer-page/chrono (15).jpg"
+
+    }
+    
   ]
 
   count = 0;
