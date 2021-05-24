@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "153682225035",
+    "project_id": "orthocleannotifications",
+    "storage_bucket": "orthocleannotifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153682225035:android:566f391d8e9608b198b18e",
+        "android_client_info": {
+          "package_name": "com.orthoclean.notifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153682225035-ctdeaq9kp28f7868djqccub3dn6r93kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZx4bJDZgOPPRwrwpQC9s9K2ivTYcbno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153682225035-ctdeaq9kp28f7868djqccub3dn6r93kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
